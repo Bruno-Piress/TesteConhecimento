@@ -1,9 +1,8 @@
-Para startar o projeto 
-No terminal digite
+Para iniciar o projeto, digite no terminal:
 
-npm Install - Para baixar o node_modules
-npm run dev - Para iniciar o Projeto
---------------- // -------------------------------
+1 - npm Install - Para baixar o node_modules
+2 - npm run dev - Para iniciar o Projeto
+
 
 # Quasar App (teste)
 
