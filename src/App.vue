@@ -33,12 +33,10 @@ export default {
     },
     submitForm(formData) {
       if (this.personToEdit) {
-        // Atualizar pessoa existente
         const index = this.people.findIndex(person => person.id === this.personToEdit.id);
         this.people[index] = { ...formData, id: this.personToEdit.id };
         this.personToEdit = null;
       } else {
-        // Adicionar nova pessoa
         this.people.push({ ...formData, id: Date.now() });
       }
     }
