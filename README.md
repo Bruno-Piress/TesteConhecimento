@@ -1,6 +1,7 @@
 Para iniciar o projeto, digite no terminal:
 
 1 - npm Install - Para baixar o node_modules
+
 2 - npm run dev - Para iniciar o Projeto
 
 
