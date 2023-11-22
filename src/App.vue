@@ -1,8 +1,6 @@
 <template>
-  <div>
-    <person-form :personToEdit="personToEdit" @submit="submitForm" />
+    <person-form :personToEdit="personToEdit" @submitIncluir="submitForm" />
     <person-list :people="people" @edit="editPerson" @delete="deletePerson" />
-  </div>
 </template>
 
 <script>
@@ -24,6 +22,7 @@ export default {
     deletePerson(personId) {
       this.people = this.people.filter(person => person.id !== personId);
     },
+
     submitForm(formData) {
       if (this.personToEdit) {
         const index = this.people.findIndex(person => person.id === this.personToEdit.id);

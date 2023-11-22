@@ -1,7 +1,7 @@
 <template>
-  <div class="flex justify-center">
-    <form @submit.prevent="submitForm">
-      <h2 class="text-bold flex justify-center text-4xl mt-4	">CADASTRO:</h2>
+  <div class="flex justify-center bg-gradient-to-r from-cyan-500 to-blue-500">
+    <form class=" mt-4  border-solid border-2 border-gray-500 rounded-lg bg-white" @submit.prevent="submitForm">
+      <h2 class="text-bold flex justify-center text-4xl mt-4">CADASTRO</h2>
 
       <h4 class="text-bold flex justify-center">Dados Pessoais:</h4>
 
@@ -127,12 +127,12 @@
         />
       </div>
       <br>
+
       <div  class="flex justify-center" >
-        <q-btn type="submit" color="primary"
-          >Salvar</q-btn
-        >
+        <q-btn type="submitIncluir" color="primary">incluir</q-btn>
       </div>
     </form>
+
   </div>
 </template>
 
@@ -163,8 +163,7 @@ export default {
   },
   methods: {
     submitForm() {
-      this.$emit("submit", { ...this.formData });
-      this.clearForm();
+      this.$emit("submitIncluir", { ...this.formData });
     },
 
     async buscarCep() {
