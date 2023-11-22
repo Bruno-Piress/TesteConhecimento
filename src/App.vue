@@ -1,14 +1,7 @@
 <template>
   <div>
-    <person-form
-    :personToEdit="personToEdit"
-    @submit="submitForm"
-    ></person-form>
-    <person-list
-      :people="people"
-      @edit="editPerson"
-      @delete="deletePerson"
-    ></person-list>
+    <person-form :personToEdit="personToEdit" @submit="submitForm" />
+    <person-list :people="people" @edit="editPerson" @delete="deletePerson" />
   </div>
 </template>
 

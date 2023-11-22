@@ -1,17 +1,15 @@
 <template>
   <div class="flex justify-center">
     <ul>
-      <li
-        class="flex justify-center"
-        v-for="person in people"
-        :key="person.id"
-        style="display: block; margin-bottom: 20px"
-      >
+      <li class="mb-4" v-for="person in people" :key="person.id">
+
         <div>Nome: {{ person.name }}</div>
 
         <div>Data de Nascimento: {{ person.birthdate }}</div>
 
         <div>CPF: {{ person.cpf }}</div>
+
+        <div>CEP: {{ person.cep }}</div>
 
         <div>Rua: {{ person.logradouro }}</div>
 

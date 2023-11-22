@@ -25,10 +25,9 @@
 
         <q-input
           outlined
+          mask="###.###.###-##"
           class="w-64 mr-2 mb-2"
           label="CPF:"
-          placeholder="###.###.###-##"
-          v-mask="'###.###.###-##'"
           v-model="formData.cpf"
           required
         />
@@ -41,6 +40,7 @@
           outlined
           class="w-50 mr-2 mb-2"
           label="CEP:"
+          mask="#####-###"
           v-model="formData.cep"
           id="cep"
           name="cep"
@@ -89,6 +89,7 @@
       <div class="flex justify-center">
         <q-input
           outlined
+          mask="(##)# ####-####"
           class="w-50 mr-2 mb-2"
           label="Celular:"
           v-model="formData.celular"
@@ -98,6 +99,7 @@
 
         <q-input
           outlined
+          mask="####-####"
           class="w-50 mr-2 mb-2"
           label="Telefone Residencial:"
           v-model="formData.telresidencial"
@@ -107,6 +109,7 @@
 
         <q-input
           outlined
+          mask="####-####"
           class="w-50 mr-2 mb-2"
           label="Telefone Comercial:"
           v-model="formData.telcomercial"
@@ -143,6 +146,7 @@ export default {
         name: "",
         birthdate: "",
         cpf: "",
+        cep: "",
         logradouro: "",
         bairro: "",
         localidade: "",
@@ -170,6 +174,7 @@ export default {
         );
         const data = await response.json();
 
+        this.formData.cep = data.cep;
         this.formData.logradouro = data.logradouro;
         this.formData.bairro = data.bairro;
         this.formData.localidade = data.localidade;
