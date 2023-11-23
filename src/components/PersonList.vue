@@ -1,11 +1,10 @@
 <template>
   <div>
-    <h2 class="flex justify-center text-bold text-2xl mb-4 mt-4">CADASTROS:</h2>
+    <h2 class="flex justify-center text-bold text-2xl mb-4 mt-4">Pessoas Cadastradas:</h2>
 
-    <div class="flex justify-center">
-      <ul class="flex">
+      <ul class="flex justify-center">
         <li
-          class="mb-4 mr-6 rounded-md bg-slate-200"
+          class="mb-4 mr-6 rounded-md bg-slate-200 p-[20px]"
           v-for="person in people"
           :key="person.id"
         >
@@ -17,6 +16,10 @@
           <div><strong>Bairro:</strong> {{ person.bairro }}</div>
           <div><strong>Município:</strong> {{ person.localidade }}</div>
           <div><strong>Estado:</strong> {{ person.uf }}</div>
+          <div><strong>Celular:</strong> {{ person.celular }}</div>
+          <div><strong>Telefone Residencial:</strong> {{ person.telresidencial }}</div>
+          <div><strong>Telefone Comercial:</strong> {{ person.telcomercial }}</div>
+          <div><strong>E-mail:</strong> {{ person.email }}</div>
 
 
           <div class="flex justify-center mt-4 mb-4">
@@ -37,7 +40,6 @@
         </li>
       </ul>
     </div>
-  </div>
 </template>
 
 <script>

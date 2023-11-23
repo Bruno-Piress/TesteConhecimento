@@ -1,6 +1,6 @@
 <template>
   <div class="flex justify-center bg-gradient-to-r from-cyan-500 to-blue-500">
-    <form class=" mt-4  border-solid border-2 border-gray-500 rounded-lg bg-white" @submit.prevent="submitForm">
+    <form class=" mt-4  border-solid border-2 border-gray-500 rounded-lg bg-white p-[20px] mb-4" @submit.prevent="submitForm">
       <h2 class="text-bold flex justify-center text-4xl mt-4">CADASTRO</h2>
 
       <h4 class="text-bold flex justify-center">Dados Pessoais:</h4>
